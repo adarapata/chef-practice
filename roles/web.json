@@ -2,6 +2,7 @@
   "name": "web",
   "chef_type": "role",
   "json_class": "Chef::Role",
+  "environment": "development",
   "default_attributes": {
     "apache": {
       "listen_ports": [
