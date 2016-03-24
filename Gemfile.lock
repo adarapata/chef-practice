@@ -2,7 +2,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     addressable (2.4.0)
-    berkshelf (4.3.0)
+    berkshelf (4.3.1)
       addressable (~> 2.3, >= 2.3.4)
       berkshelf-api-client (~> 2.0, >= 2.0.2)
       buff-config (~> 1.0)
@@ -85,6 +85,10 @@ GEM
     httpclient (2.7.1)
     ipaddress (0.8.3)
     json (1.8.3)
+    knife-solo (0.5.1)
+      chef (>= 10.20)
+      erubis (~> 2.7.0)
+      net-ssh (~> 2.7, < 3.0)
     knife-zero (1.15.2)
       chef (~> 12.6)
     libyajl2 (1.2.0)
@@ -98,12 +102,12 @@ GEM
     mixlib-config (2.2.1)
     mixlib-log (1.6.0)
     mixlib-shellout (2.2.6)
-    molinillo (0.2.3)
+    molinillo (0.4.4)
     multi_json (1.11.2)
     multipart-post (2.0.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-ssh (3.0.2)
+    net-ssh (2.9.4)
     net-ssh-gateway (1.2.0)
       net-ssh (>= 2.6.5)
     net-ssh-multi (1.2.1)
@@ -113,7 +117,7 @@ GEM
     nio4r (1.2.1)
     octokit (4.3.0)
       sawyer (~> 0.7.0, >= 0.5.3)
-    ohai (8.12.0)
+    ohai (8.12.1)
       chef-config (>= 12.5.0.alpha.1, < 13)
       ffi (~> 1.9)
       ffi-yajl (~> 2.2)
@@ -123,13 +127,12 @@ GEM
       mixlib-log
       mixlib-shellout (~> 2.0)
       plist
-      rake (~> 10.1)
       systemu (~> 2.6.4)
       wmi-lite (~> 1.0)
     plist (3.1.0)
     proxifier (1.0.3)
     rack (1.6.4)
-    rake (10.5.0)
+    rake (11.1.1)
     retryable (2.0.3)
     ridley (4.5.0)
       addressable
@@ -178,10 +181,10 @@ GEM
       rspec-its
       specinfra (~> 2.53)
     sfl (2.2)
-    solve (2.0.2)
-      molinillo (~> 0.2.3)
+    solve (2.0.3)
+      molinillo (~> 0.4.2)
       semverse (~> 1.1)
-    specinfra (2.53.1)
+    specinfra (2.54.1)
       net-scp
       net-ssh (>= 2.7, < 3.1)
       net-telnet
@@ -203,9 +206,10 @@ PLATFORMS
 DEPENDENCIES
   berkshelf
   chef
+  knife-solo
   knife-zero
   rake
   serverspec
 
 BUNDLED WITH
-   1.11.2
+   1.10.6

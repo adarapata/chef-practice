@@ -5,6 +5,7 @@ gem 'rake'
 group :development do
   gem 'chef'
   gem 'knife-zero'
+  gem 'knife-solo'
 end
 
 group :berks do
